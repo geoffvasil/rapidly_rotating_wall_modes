@@ -6,7 +6,7 @@ from dedalus.core import operators
 import pickle
 import h5py
 
-# Parameters: double cover, so H=0.5
+# Parameters
 Lz = 1
 r0 = 0.2
 # empirical R0 for this problem
@@ -67,7 +67,7 @@ p_top = p_top['g']
 T_int = np.sum(T['g'][:Nz//2],axis=0)
 
 u = d3.grad(p, polar_coords).evaluate()
-u.change_scales(4)
+#u.change_scales(4)
 u = u['g']
 uphi_axi = np.mean(u[1], axis=1)
 
